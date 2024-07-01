@@ -259,6 +259,92 @@ struct GridElement: View {
     }
 }
 
+struct chartDaily: View {
+    
+    let dailyForecast: [DailyForecastEntry]
+    let isTempMax: Bool
+    
+    var body: some View {
+        Chart(dailyForecast) { data in
+            LineMark(
+                x: .value("Day", data.time),
+                y: .value("Temp", isTempMax ? data.temperature_max : data.temperature_min)
+            )
+            .foregroundStyle(.gozeCarpanGoy)
+            .interpolationMethod(.linear)
+
+            
+            PointMark(
+                x: .value("Day", data.time),
+                y: .value("Temp", isTempMax ? data.temperature_max : data.temperature_min)
+            )
+            
+            .symbol {
+                
+                Circle()
+                    .frame(width: 7, height: 7)
+                    .foregroundStyle(Color.mint)
+            }
+            .annotation(position: .top) {
+                Text("\(Int(isTempMax ? data.temperature_max : data.temperature_min))°")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding(4)
+            }
+        }
+        .chartXAxis(.hidden)
+        .chartYAxis(.hidden)
+        .frame(height: 60)
+        .brightness(0.3)
+        .padding([.leading, .trailing], -10)
+    }
+}
+
+struct chartHourly: View {
+    
+    let hourlyForecast: [HourlyForecastEntry]
+    
+    var body: some View {
+        Chart(hourlyForecast) { data in
+            LineMark(
+                x: .value("Hour", data.time),
+                y: .value("Temp", data.temperature)
+            )
+            .foregroundStyle(.gozeCarpanGoy)
+            .interpolationMethod(.catmullRom)
+            
+            AreaMark(
+                x: .value("Hour", data.time),
+                y: .value("Temp", data.temperature)
+            )
+            .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Color(.altgoy), Color(.clear)]),
+                                            startPoint: .top,
+                                            endPoint: UnitPoint(x: 0.5, y: 0.8)))
+            .interpolationMethod(.catmullRom)
+            
+        }
+        .chartXAxis(.hidden)
+        .chartYAxis(.hidden)
+        .frame(height: 50)
+        .padding([.leading, .trailing], -25)
+    }
+}
+
+struct extentButton: View {
+    
+    let imageName: String
+    let animationID: String
+    let namespace: Namespace.ID
+    
+    var body: some View {
+        Image(systemName: imageName)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .foregroundStyle(.white)
+            .frame(width: 20, height: 20)
+            .matchedGeometryEffect(id: animationID, in: namespace)
+    }
+}
 
 
 

@@ -124,25 +124,7 @@ struct WeatherMainView: View {
                                 
                                 Spacer()
                                 
-                                if (viewModel.isDailyExpanded)
-                                {
-                                    Image(systemName: "chevron.up")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .foregroundStyle(.white)
-                                        .frame(width: 20, height: 20)
-                                        .matchedGeometryEffect(id: "Animation Button", in: buttonAnimation)
-                                        
-                                } else
-                                {
-                                    Image(systemName: "chevron.down")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .foregroundStyle(.white)
-                                        .frame(width: 20, height: 20)
-                                        .matchedGeometryEffect(id: "Animation Button", in: buttonAnimation)
-                                        
-                                }
+                                extentButton(imageName: viewModel.isDailyExpanded ? "chevron.up" : "chevron.down", animationID: "Animation Button", namespace: buttonAnimation)
                             }
                             
                             
@@ -165,76 +147,12 @@ struct WeatherMainView: View {
                                             }
                                         }
                                         
-                                        
-                                        Chart(viewModel.dailyForecastEntries) { data in
-                                            LineMark(
-                                                x: .value("Day", data.time),
-                                                y: .value("Temp", data.temperature_max)
-                                            )
-                                            .foregroundStyle(.altgoy)
-                                            .interpolationMethod(.linear)
-
-                                            
-                                            PointMark(
-                                                x: .value("Day", data.time),
-                                                y: .value("Temp", data.temperature_max)
-                                            )
-                                            
-                                            .symbol {
-                                                
-                                                Circle()
-                                                    .frame(width: 7, height: 7)
-                                                    .foregroundStyle(Color.cyan)
-                                            }
-                                            .annotation(position: .top) {
-                                                Text("\(Int(data.temperature_max))°")
-                                                    .font(.headline)
-                                                    .foregroundColor(.white)
-                                                    .padding(4)
-                                            }
-                                        }
-                                        .chartXAxis(.hidden)
-                                        .chartYAxis(.hidden)
-                                        .frame(height: 60)
-                                        .padding([.leading, .trailing], -10)
-                                        
+                                        chartDaily(dailyForecast: viewModel.dailyForecastEntries, isTempMax: true)
                                         
                                         Spacer()
                                             .frame(height: 20)
                                         
-                                        Chart(viewModel.dailyForecastEntries) { data in
-                                            LineMark(
-                                                x: .value("Day", data.time),
-                                                y: .value("Temp", data.temperature_min)
-                                            )
-                                            .foregroundStyle(.altgoy)
-                                            .interpolationMethod(.linear)
-                                            
-
-                                            
-                                            PointMark(
-                                                x: .value("Day", data.time),
-                                                y: .value("Temp", data.temperature_min)
-                                            )
-                                            
-                                            .symbol {
-                                                
-                                                Circle()
-                                                    .frame(width: 7, height: 7)
-                                                    .foregroundStyle(Color.cyan)
-                                            }
-                                            .annotation(position: .bottom) {
-                                                Text("\(Int(data.temperature_min))°")
-                                                    .font(.headline)
-                                                    .foregroundColor(.white)
-                                                    .padding(4)
-                                            }
-                                        }
-                                        .chartXAxis(.hidden)
-                                        .chartYAxis(.hidden)
-                                        .frame(height: 60)
-                                        .padding([.leading, .trailing], -10)
-                                        
+                                        chartDaily(dailyForecast: viewModel.dailyForecastEntries, isTempMax: false)
                                     }
                                 } else
                                 {
@@ -267,16 +185,6 @@ struct WeatherMainView: View {
                                 viewModel.isDailyExpanded.toggle()
                             }
                         }
-//                        .background
-//                        {
-//                            RoundedRectangle(cornerRadius: 10, style: .continuous)
-//                                .fill(.secondary)//.shadow(.drop(radius: 2)))
-//                                .opacity(0.7)
-//                            //                                    .foregroundStyle(.ultraThinMaterial)
-//                            //                                    .environment(\.colorScheme, .dark)
-//                        }
-                        
-                        
                         
                         
                         VStack(alignment: .leading, spacing: 30)
@@ -313,35 +221,9 @@ struct WeatherMainView: View {
                                         }
                                     }
                                     
-                                    Chart(viewModel.hourlyForecastEntries) { data in
-                                        LineMark(
-                                            x: .value("Hour", data.time),
-                                            y: .value("Temp", data.temperature)
-                                        )
-                                        .foregroundStyle(.gozeCarpanGoy)
-                                        .interpolationMethod(.catmullRom)
-                                        
-                                        AreaMark(
-                                            x: .value("Hour", data.time),
-                                            y: .value("Temp", data.temperature)
-                                        )
-                                        .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Color(.altgoy), Color(.clear)]),
-                                                                        startPoint: .top,
-                                                                        endPoint: UnitPoint(x: 0.5, y: 0.8)))
-                                        .interpolationMethod(.catmullRom)
-                                        
-                                    }
-                                    .chartXAxis(.hidden)
-                                    .chartYAxis(.hidden)
-                                    .frame(height: 50)
-                                    .padding([.leading, .trailing], -25)
+                                    chartHourly(hourlyForecast: viewModel.hourlyForecastEntries)
                                 }
                             }
-                            
-                            
-                            
-                            
-                            
                         }
                         .frame(width: UIScreen.main.bounds.width - 70)
                         .padding([.leading, .bottom, .trailing], 25)
@@ -386,10 +268,6 @@ struct WeatherMainView: View {
             }
         }
         .environmentObject(viewModel)
-//        .onAppear
-//        {
-//            viewModel.getForecasts()
-//        }
     }
 }
 

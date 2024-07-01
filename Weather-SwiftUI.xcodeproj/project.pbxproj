@@ -7,18 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE2C7C062C00EF4900A69CA7 /* OpenMeteoSdk in Frameworks */ = {isa = PBXBuildFile; productRef = BE2C7C052C00EF4900A69CA7 /* OpenMeteoSdk */; };
 		BE4665EC2BF184F3004F1446 /* Weather_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4665EB2BF184F3004F1446 /* Weather_SwiftUIApp.swift */; };
-		BE4665EE2BF184F3004F1446 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4665ED2BF184F3004F1446 /* ContentView.swift */; };
+		BE4665EE2BF184F3004F1446 /* WeatherMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4665ED2BF184F3004F1446 /* WeatherMainView.swift */; };
 		BE4665F02BF184F5004F1446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE4665EF2BF184F5004F1446 /* Assets.xcassets */; };
 		BE4665F32BF184F5004F1446 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE4665F22BF184F5004F1446 /* Preview Assets.xcassets */; };
+		BE475B5F2C15DFD500AC750B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE475B5E2C15DFD500AC750B /* LoadingView.swift */; };
+		BE5DF5562C064B1D001B7052 /* WeatherMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5DF5552C064B1D001B7052 /* WeatherMainViewModel.swift */; };
+		BE6F42092C053B3A00DFEE07 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F42082C053B3A00DFEE07 /* WeatherData.swift */; };
+		BE6F420B2C053E1000DFEE07 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F420A2C053E1000DFEE07 /* NetworkManager.swift */; };
+		BE6F420D2C05415400DFEE07 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F420C2C05415400DFEE07 /* LocationManager.swift */; };
+		BE7CCA8D2C04FE3800A3130F /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7CCA8C2C04FE3800A3130F /* Views.swift */; };
+		BED4A4A42C0941B800919609 /* WeatherMainViewModel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED4A4A32C0941B800919609 /* WeatherMainViewModel+Ext.swift */; };
+		BED7C40C2C165CE0009786C0 /* NoConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED7C40B2C165CE0009786C0 /* NoConnectionView.swift */; };
+		BEDF614D2C06AB7B0009AB83 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF614C2C06AB7B0009AB83 /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BE4665E82BF184F3004F1446 /* Weather-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4665EB2BF184F3004F1446 /* Weather_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_SwiftUIApp.swift; sourceTree = "<group>"; };
-		BE4665ED2BF184F3004F1446 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BE4665ED2BF184F3004F1446 /* WeatherMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMainView.swift; sourceTree = "<group>"; };
 		BE4665EF2BF184F5004F1446 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE4665F22BF184F5004F1446 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BE475B5E2C15DFD500AC750B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		BE5DF5552C064B1D001B7052 /* WeatherMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMainViewModel.swift; sourceTree = "<group>"; };
+		BE6F42082C053B3A00DFEE07 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		BE6F420A2C053E1000DFEE07 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BE6F420C2C05415400DFEE07 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		BE7CCA8C2C04FE3800A3130F /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		BED4A4A32C0941B800919609 /* WeatherMainViewModel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherMainViewModel+Ext.swift"; sourceTree = "<group>"; };
+		BED7C40B2C165CE0009786C0 /* NoConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectionView.swift; sourceTree = "<group>"; };
+		BEDF614C2C06AB7B0009AB83 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2C7C062C00EF4900A69CA7 /* OpenMeteoSdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +71,11 @@
 		BE4665EA2BF184F3004F1446 /* Weather-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				BEABD5122C19DA1200EC86B7 /* Views */,
+				BEABD5132C19DA4800EC86B7 /* Utilities */,
+				BEABD5162C19DA7C00EC86B7 /* Models */,
+				BEABD5172C19DADB00EC86B7 /* Screens */,
 				BE4665EB2BF184F3004F1446 /* Weather_SwiftUIApp.swift */,
-				BE4665ED2BF184F3004F1446 /* ContentView.swift */,
 				BE4665EF2BF184F5004F1446 /* Assets.xcassets */,
 				BE4665F12BF184F5004F1446 /* Preview Content */,
 			);
@@ -65,6 +88,60 @@
 				BE4665F22BF184F5004F1446 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BEABD5122C19DA1200EC86B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE475B5E2C15DFD500AC750B /* LoadingView.swift */,
+				BED7C40B2C165CE0009786C0 /* NoConnectionView.swift */,
+				BE7CCA8C2C04FE3800A3130F /* Views.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BEABD5132C19DA4800EC86B7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BEABD5152C19DA5800EC86B7 /* Error */,
+				BEABD5142C19DA5200EC86B7 /* Managers */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BEABD5142C19DA5200EC86B7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BE6F420A2C053E1000DFEE07 /* NetworkManager.swift */,
+				BE6F420C2C05415400DFEE07 /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		BEABD5152C19DA5800EC86B7 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				BEDF614C2C06AB7B0009AB83 /* Errors.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		BEABD5162C19DA7C00EC86B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE6F42082C053B3A00DFEE07 /* WeatherData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BEABD5172C19DADB00EC86B7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BED4A4A32C0941B800919609 /* WeatherMainViewModel+Ext.swift */,
+				BE5DF5552C064B1D001B7052 /* WeatherMainViewModel.swift */,
+				BE4665ED2BF184F3004F1446 /* WeatherMainView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +160,9 @@
 			dependencies = (
 			);
 			name = "Weather-SwiftUI";
+			packageProductDependencies = (
+				BE2C7C052C00EF4900A69CA7 /* OpenMeteoSdk */,
+			);
 			productName = "Weather-SwiftUI";
 			productReference = BE4665E82BF184F3004F1446 /* Weather-SwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +191,9 @@
 				Base,
 			);
 			mainGroup = BE4665DF2BF184F3004F1446;
+			packageReferences = (
+				BE2C7C042C00EF4900A69CA7 /* XCRemoteSwiftPackageReference "sdk" */,
+			);
 			productRefGroup = BE4665E92BF184F3004F1446 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +220,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE4665EE2BF184F3004F1446 /* ContentView.swift in Sources */,
+				BE6F420B2C053E1000DFEE07 /* NetworkManager.swift in Sources */,
+				BE7CCA8D2C04FE3800A3130F /* Views.swift in Sources */,
+				BED4A4A42C0941B800919609 /* WeatherMainViewModel+Ext.swift in Sources */,
+				BE6F42092C053B3A00DFEE07 /* WeatherData.swift in Sources */,
+				BE475B5F2C15DFD500AC750B /* LoadingView.swift in Sources */,
+				BE6F420D2C05415400DFEE07 /* LocationManager.swift in Sources */,
+				BE4665EE2BF184F3004F1446 /* WeatherMainView.swift in Sources */,
+				BE5DF5562C064B1D001B7052 /* WeatherMainViewModel.swift in Sources */,
+				BED7C40C2C165CE0009786C0 /* NoConnectionView.swift in Sources */,
+				BEDF614D2C06AB7B0009AB83 /* Errors.swift in Sources */,
 				BE4665EC2BF184F3004F1446 /* Weather_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +367,7 @@
 				DEVELOPMENT_TEAM = L6R5Q4T23R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Weather app needs your location for correct data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +397,7 @@
 				DEVELOPMENT_TEAM = L6R5Q4T23R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Weather app needs your location for correct data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,6 +438,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BE2C7C042C00EF4900A69CA7 /* XCRemoteSwiftPackageReference "sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/open-meteo/sdk.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BE2C7C052C00EF4900A69CA7 /* OpenMeteoSdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE2C7C042C00EF4900A69CA7 /* XCRemoteSwiftPackageReference "sdk" */;
+			productName = OpenMeteoSdk;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BE4665E02BF184F3004F1446 /* Project object */;
 }
