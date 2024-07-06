@@ -43,6 +43,9 @@ struct WeatherMainView: View {
 //
 //                Image("starry_night")
 //                    .resizable()
+//                    .ignoresSafeArea(.all)
+//                    .scaledToFill()
+//                    .brightness(-0.0)
 //                    .aspectRatio(contentMode: .fill)
 //                    .ignoresSafeArea(.all)
 //                    .brightness(0.0)
