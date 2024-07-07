@@ -27,7 +27,7 @@
   - Below these, there are four indicators which show **humidity**, **real feel** temperature, **precipitation** and finally **wind speed**.
 
 <p align="center">
-<img src= "https://github.com/samil145/Weather_App_SwiftUI/blob/main/Images/app_record.gif?raw=true" height="600" width="300" >
+<img src= "https://github.com/samil145/Weather_App_SwiftUI/blob/main/Images/app_record2.gif?raw=true" height="600" width="300" >
 </p>
 
 ## Network Connection
